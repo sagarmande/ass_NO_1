@@ -1,0 +1,57 @@
+Q1. What is the purpose of Python's OOP?
+   - The purpose of Python's Object-Oriented Programming (OOP) is to enable the organization of code into reusable and modular structures called classes. OOP promotes the concept of objects, which are instances of classes, and allows you to model real-world entities and their behaviors in a more natural and organized way. It provides features such as encapsulation, inheritance, and polymorphism, which help in creating maintainable and efficient code.
+
+Q2. Where does an inheritance search look for an attribute?
+   - In Python, when you access an attribute (a variable or method) of an object, the interpreter performs an inheritance search to find that attribute. The search starts with the instance itself and proceeds through its class hierarchy, looking in the class, its base classes (superclasses), and their superclasses recursively until the attribute is found or the search reaches the top of the class hierarchy (usually the `object` class).
+
+Q3. How do you distinguish between a class object and an instance object?
+   - In Python, a class object and an instance object are different in the following ways:
+     - A class object is the blueprint for creating instances, while an instance object is a specific instantiation of a class.
+     - Class objects define attributes and methods that are shared among all instances of the class, while instance objects store data specific to a particular instance.
+     - You create a class object using the `class` keyword, and you create an instance object by calling the class as if it were a function (e.g., `obj = MyClass()`).
+
+Q4. What makes the first argument in a class’s method function special?
+   - In Python, the first argument in a class's method function is conventionally named `self`, although you can technically use any valid variable name. What makes it special is that it represents the instance of the class on which the method is called. This allows you to access and manipulate the instance's attributes and call other methods within the class using the `self` reference. It's a reference to the object itself and is passed automatically when you call a method on an instance.
+
+Q5. What is the purpose of the __init__ method?
+   - The `__init__` method is a special method (also known as a constructor) in Python classes. Its purpose is to initialize the attributes of an object when an instance of the class is created. You can think of it as the class's way of setting up its initial state. It takes `self` as its first argument, followed by any additional arguments you want to pass when creating an instance. You typically use `__init__` to set the initial values of instance variables.
+
+Q6. What is the process for creating a class instance?
+   - To create a class instance in Python, you need to follow these steps:
+     1. Define a class using the `class` keyword.
+     2. Inside the class, define an `__init__` method to initialize the object's attributes.
+     3. Create an instance of the class by calling the class as if it were a function, passing any required arguments to the `__init__` method.
+     Example:
+     ```python
+     class MyClass:
+         def __init__(self, arg1, arg2):
+             self.attribute1 = arg1
+             self.attribute2 = arg2
+
+     obj = MyClass(value1, value2)
+     ```
+
+Q7. What is the process for creating a class?
+   - To create a class in Python, you should do the following:
+     1. Use the `class` keyword followed by the class name to define the class.
+     2. Define attributes and methods within the class.
+     Example:
+     ```python
+     class MyClass:
+         def __init__(self, arg1, arg2):
+             self.attribute1 = arg1
+             self.attribute2 = arg2
+         
+         def some_method(self):
+             # Define method behavior here
+     ```
+
+Q8. How would you define the superclasses of a class?
+   - In Python, you define the superclasses (also known as base classes or parent classes) of a class by specifying them in the class definition within parentheses. The class inherits attributes and methods from its superclasses. Here's an example of defining a class with superclasses:
+   
+   ```python
+   class SubClass(SuperClass1, SuperClass2):
+       # Class definition
+   ```
+
+   In this example, `SubClass` inherits from both `SuperClass1` and `SuperClass2`. It can access attributes and methods defined in both superclasses in addition to any attributes or methods defined within `SubClass`.
